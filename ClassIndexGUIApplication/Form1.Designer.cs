@@ -114,6 +114,7 @@
             this.trackWorker.Name = "trackWorker";
             this.trackWorker.Size = new System.Drawing.Size(335, 56);
             this.trackWorker.TabIndex = 3;
+            this.trackWorker.ValueChanged += new System.EventHandler(this.trackWorker_ValueChanged);
             // 
             // lblName
             // 

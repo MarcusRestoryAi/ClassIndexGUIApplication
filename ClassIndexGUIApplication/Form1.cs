@@ -30,5 +30,19 @@ namespace ClassIndexGUIApplication
             //Uppdatera vår TrackerBar
             trackWorker.Maximum = Worker.AllWorkers.Count - 1;
         }
+
+        private void trackWorker_ValueChanged(object sender, EventArgs e)
+        {
+            //Hämtar det markerare värdet från Tracker Bar
+            int intSelectedIndex = trackWorker.Value;
+
+            //Vi hämtar Worker objektet med det valda index värdet
+            Worker selectedWorker = Worker.AllWorkers[intSelectedIndex];
+
+            //Skriver ut objketets attribut till labels
+            lblName.Text = $"Name: {selectedWorker.Name}";
+            lblAge.Text = $"Age: {selectedWorker.Age}";
+            lblTitle.Text = $"Title: {selectedWorker.WorkTitle}";
+        }
     }
 }
